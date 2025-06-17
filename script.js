@@ -1,57 +1,64 @@
 const button = document.getElementById("btn");
+
 console.dir(button);
 
-const button1 = document.getElementById("btn1");
-console.dir(button1);
-
-function traditionalFn() {
+function tradationalFn() {
     console.log("Traditional function called");
 }
-function nameee() {
-    console.log("hello my name is surya");
-}
-function loop() {
-    for (let i = 0; i <= 100; i++) {
-        console.log(i);
-    }
-}
-function task() {
-    console.log("Task done");
-}
+
 
 const arrowFn = () => {
     console.log("Arrow function called");
 };
 
 
-traditionalFn();
+tradationalFn();
+arrowFn();
 
 
+// Traditional FN EVENT CALL 
+// button.addEventListener("click", function() {
+//   console.log("Button clicked");
+// });
 
-button.addEventListener("click", function (e) {
-    console.log("button clicked");
-    nameee();
-    loop();
-    task();
+// Arrow FN EVENT CALL
+button.addEventListener("click", () => {
+    console.log("Button clicked with arrow function");
+    loops();
+    printName();
+    done();
+});
+
+const loops = () => {
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+    }
+}
+
+const printName = () => {
+    console.log("My name is ......");
+}
 
 
+function done () {
+    console.log("Done");
+}
 
+
+// parent.addEventListener("click", function(e) {
+//   console.log("Parent clicked");
+// });
+
+
+const inputBox = document.getElementById("input");
+const submitButton = document.getElementById("submitBtn");
+
+const output = document.getElementById("output");
+
+
+submitButton.addEventListener("click", (e) => {
+    console.log("Input value:", inputBox.value);
+    output.innerText = inputBox.value; 
 })
 
-
-button1.addEventListener("click", function (e) {
-    console.log("surya");
-    arrowFn();
-})
-
-
-const input = document.getElementById("inputBox");
-
-const submit =  document.getElementById("submit");
-const out = document.getElementById("output");
-
-submit.addEventListener("click", (e) =>
-
-{
-    console.log("input value:",input.value)
-})
+console.dir(inputBox);
