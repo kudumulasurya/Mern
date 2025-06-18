@@ -40,7 +40,7 @@ const printName = () => {
 }
 
 
-function done () {
+function done() {
     console.log("Done");
 }
 
@@ -58,7 +58,27 @@ const output = document.getElementById("output");
 
 submitButton.addEventListener("click", (e) => {
     console.log("Input value:", inputBox.value);
-    output.innerText = inputBox.value; 
+    output.innerText = inputBox.value;
 })
 
 console.dir(inputBox);
+
+
+const input1 = document.getElementById("input1");
+const input2 = document.getElementById("input2");
+const input3 = document.getElementById("input3");
+const Output1 = document.getElementById("Output1");
+const Output2 = document.getElementById("Output2");
+const Output3 = document.getElementById("Output3");
+
+input1.addEventListener("input", () => {
+    Output1.innerText = "Input 1: " + input1.value;
+});
+
+input2.addEventListener("input", () => {
+    Output2.innerText = "Input 2: " + input2.value;
+});
+
+input3.addEventListener("input", () => {
+    Output3.innerText = "Input 3: " + input3.value;
+});
