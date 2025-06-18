@@ -1,0 +1,15 @@
+#colorBox {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(96, 178, 90);
+  margin-left: 500px;
+  margin-bottom: 20px;
+  border: 4px solid black;
+  transition: background-color 0.3s ease;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-left: 500px;
+}
