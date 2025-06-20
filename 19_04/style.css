@@ -1,0 +1,23 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+.carding{
+    width: 200px;
+    height: 200px
+}
+.card{
+    padding: 15px;
+    height: 450px;
+    width: 230px;
+    border : 1px solid black;
+    border-radius: 24px;
+    margin: 10px;
+}

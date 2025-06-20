@@ -87,16 +87,41 @@
 
 // *****DAY   3******************
 
-const changecolourbutton =document.getElementById("changecolourbutton");
-const colorBox =document.getElementById("colorBox");
+// const changecolourbutton =document.getElementById("changecolourbutton");
+// const colorBox =document.getElementById("colorBox");
 
-changecolourbutton.addEventListener("click", () =>{
-    const red = Math.round(Math.random() * 255);
+// changecolourbutton.addEventListener("click", () =>{
+//     const red = Math.round(Math.random() * 255);
 
-    const green = Math.round(Math.random() * 255);
+//     const green = Math.round(Math.random() * 255);
 
-    const blue = Math.round(Math.random() * 255);
+//     const blue = Math.round(Math.random() * 255);
 
-    console.log(red,green,blue);
-    colorBox.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+//     console.log(red,green,blue);
+//     colorBox.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+// })
+
+const output = document.getElementById("output");
+const input =  document.getElementById("input");
+const check = document.getElementById("check");
+const start = document.getElementById("start");
+
+let newNumber =0;
+start.addEventListener("click",()=>{
+    
+    console.log(input.value);
+    
 })
+console.log(input)
+check.addEventListener("click", ()=>{
+    newNumber = Math.round(Math.random()*10);
+    console.log(newNumber);
+    if(newNumber==input.value)(
+        console.log("win win win ")
+    )
+
+    
+})
+input.addEventListener("input", () => {
+    output.innerText =  input.value;
+});
